@@ -1,0 +1,14 @@
+/*
+gradle.log
+!/src/
+!.gitignore
+!.classpath
+!gradlew*
+!/gradle/
+!/FORGE_LICENSE.txt
+!/README.md
+!build.gradle
+!/gradle.properties
+!.gitattributes
+!*.json
+!*.gradlew

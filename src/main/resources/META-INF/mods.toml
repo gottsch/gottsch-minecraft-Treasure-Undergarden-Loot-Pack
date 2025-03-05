@@ -1,0 +1,86 @@
+modLoader="javafml" #mandatory
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="${loader_version_range}" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+# License
+license="GNU GPLv3"
+
+# A URL to refer people to when problems occur with this mod
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]] #mandatory
+
+# The modid of the mod
+modId="treasure2_undergarden_lp" #mandatory
+
+# The version number of the mod
+version="${mod_version}" #mandatory
+
+ # A display name for the mod
+displayName="Treasure2 Undergarden LP" #mandatory
+
+# A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
+updateJSONURL="https://raw.githubusercontent.com/gottsch/gottsch-minecraft-Treasure-Undergarden-Loot-Pack/1.20.1-main/update.json" #optional
+
+# A URL for the "homepage" for this mod, displayed in the mod UI
+displayURL="https://www.curseforge.com/minecraft/mc-mods/treasure2-undergarden-loot-pack" #optional
+
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="treasure2-curseforge-logo.png" #optional
+
+# A text field displayed in the mod UI
+credits="" #optional
+# A text field displayed in the mod UI
+authors="gottsch" #optional
+# The description text for the mod (multi line!) (#mandatory)
+description=""
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.treasure2_undergarden_lp]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="${forge_version_range}" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.treasure2_undergarden_lp]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.treasure2_undergarden_lp]]
+    modId="gottschcore"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[2.1.0,)"
+    ordering="BEFORE"
+    side="BOTH"
+[[dependencies.treasure2_undergarden_lp]] #optional
+    # the modid of the dependency
+    modId="treasure2" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[3.6.2,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="BEFORE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"    
+   [[dependencies.treasure2_undergarden_lp]] #optional
+    # the modid of the dependency
+    modId="undergarden" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[0.8.14,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="BEFORE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
