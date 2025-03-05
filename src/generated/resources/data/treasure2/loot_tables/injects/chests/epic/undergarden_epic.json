@@ -56,21 +56,6 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:tipped_arrow"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 10.0,
-                "min": 5.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
           "name": "minecraft:tnt"
         },
         {

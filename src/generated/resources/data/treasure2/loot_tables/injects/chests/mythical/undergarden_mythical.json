@@ -4,29 +4,6 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:empty",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bow"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 40.0,
-                "min": 30.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:arrow"
-        },
-        {
           "type": "minecraft:item",
           "functions": [
             {
@@ -39,120 +16,79 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:spectral_arrow",
+          "name": "minecraft:tnt"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:leather_helmet",
           "weight": 2
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 20.0,
-                "min": 10.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:tnt",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
               "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
-              "treasure": false
-            }
-          ],
-          "name": "minecraft:leather_helmet",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
+              "levels": 30.0,
               "treasure": false
             }
           ],
           "name": "minecraft:leather_chestplate",
-          "weight": 4
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
+              "levels": 30.0,
               "treasure": false
             }
           ],
           "name": "minecraft:leather_leggings",
-          "weight": 4
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
+              "levels": 30.0,
               "treasure": false
             }
           ],
           "name": "minecraft:leather_boots",
-          "weight": 4
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
+              "levels": 30.0,
               "treasure": false
             }
           ],
           "name": "minecraft:wooden_sword",
-          "weight": 4
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:shield",
-          "weight": 4
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
+              "levels": 30.0,
               "treasure": false
             }
           ],
@@ -165,8 +101,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 20.0,
-                "min": 10.0
+                "max": 30.0,
+                "min": 20.0
               },
               "function": "minecraft:set_count"
             }
@@ -181,8 +117,8 @@
               "function": "minecraft:enchant_with_levels",
               "levels": {
                 "type": "minecraft:uniform",
-                "max": 20.0,
-                "min": 15.0
+                "max": 30.0,
+                "min": 20.0
               },
               "treasure": false
             }
@@ -197,8 +133,8 @@
               "function": "minecraft:enchant_with_levels",
               "levels": {
                 "type": "minecraft:uniform",
-                "max": 20.0,
-                "min": 15.0
+                "max": 30.0,
+                "min": 20.0
               },
               "treasure": false
             }
@@ -213,8 +149,8 @@
               "function": "minecraft:enchant_with_levels",
               "levels": {
                 "type": "minecraft:uniform",
-                "max": 20.0,
-                "min": 15.0
+                "max": 30.0,
+                "min": 20.0
               },
               "treasure": false
             }
@@ -229,13 +165,65 @@
               "function": "minecraft:enchant_with_levels",
               "levels": {
                 "type": "minecraft:uniform",
-                "max": 20.0,
-                "min": 15.0
+                "max": 30.0,
+                "min": 20.0
               },
               "treasure": false
             }
           ],
           "name": "minecraft:golden_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 30.0,
+                "min": 20.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:golden_sword",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 30.0,
+                "min": 20.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:golden_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 30.0,
+                "min": 20.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:gold_ingot",
           "weight": 2
         },
         {
@@ -251,29 +239,88 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:golden_sword",
+          "name": "minecraft:iron_chestplate",
           "weight": 2
         },
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:iron_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:iron_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:iron_sword",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
           "name": "minecraft:shield",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_hoe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_shovel"
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:iron_axe",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
@@ -288,12 +335,12 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:gold_ingot",
+          "name": "minecraft:cooked_porkchop",
           "weight": 2
         }
       ],
-      "name": "undergarden_legendary_items",
-      "rolls": 1.0
+      "name": "undergarden_mythical_items",
+      "rolls": 2.0
     },
     {
       "bonus_rolls": 0.0,
@@ -309,137 +356,19 @@
               "add": false,
               "damage": {
                 "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 8.0
+                "max": 0.95,
+                "min": 0.8
               },
               "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:iron_chestplate",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
+            },
             {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 8.0
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:iron_leggings",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 8.0
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:iron_boots",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 8.0
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:iron_sword",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 8.0
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:shield",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_axe",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_hoe",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_pickaxe",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_shovel",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
                 "type": "minecraft:uniform",
                 "max": 10.0,
                 "min": 5.0
               },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:cooked_porkchop",
-          "weight": 2
-        }
-      ],
-      "name": "undergarden_legendary_utherium_items",
-      "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:empty",
-          "weight": 40
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
+              "treasure": false
             }
           ],
           "name": "minecraft:diamond_chestplate",
@@ -452,10 +381,19 @@
               "add": false,
               "damage": {
                 "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
+                "max": 0.95,
+                "min": 0.8
               },
               "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 5.0
+              },
+              "treasure": false
             }
           ],
           "name": "minecraft:diamond_leggings",
@@ -468,10 +406,19 @@
               "add": false,
               "damage": {
                 "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
+                "max": 0.95,
+                "min": 0.8
               },
               "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 5.0
+              },
+              "treasure": false
             }
           ],
           "name": "minecraft:diamond_boots",
@@ -484,10 +431,19 @@
               "add": false,
               "damage": {
                 "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
+                "max": 0.95,
+                "min": 0.8
               },
               "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 5.0
+              },
+              "treasure": false
             }
           ],
           "name": "minecraft:diamond_sword",
@@ -500,8 +456,8 @@
               "add": false,
               "damage": {
                 "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
+                "max": 0.95,
+                "min": 0.8
               },
               "function": "minecraft:set_damage"
             }
@@ -511,6 +467,17 @@
         },
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 5.0
+              },
+              "treasure": false
+            }
+          ],
           "name": "minecraft:diamond_axe"
         },
         {
@@ -532,8 +499,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 5.0,
-                "min": 2.0
+                "max": 15.0,
+                "min": 5.0
               },
               "function": "minecraft:set_count"
             }
@@ -559,20 +526,51 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:netherite_upgrade_smithing_template"
+          "name": "minecraft:music_disc_mall"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:netherite_pickaxe"
+          "name": "minecraft:netherite_upgrade_smithing_template",
+          "quality": 1
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:netherite_axe"
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 5.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:netherite_pickaxe",
+          "quality": 1,
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 10.0,
+                "min": 5.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "minecraft:netherite_axe",
+          "quality": 1,
+          "weight": 2
         }
       ],
-      "name": "undergarden_legendary_forgotten_items",
+      "name": "undergarden_mythical_forgotten_items",
       "rolls": 1.0
     }
   ],
-  "random_sequence": "treasure2:injects/chests/legendary/undergarden_legendary"
+  "random_sequence": "treasure2:injects/chests/mythical/undergarden_mythical"
 }

@@ -1,5 +1,9 @@
-// 1.20.1	2025-03-04T21:51:02.7946846	Loot Tables
-2792f63917e21565e65e792957ddbd64c0ebdc56 data/treasure2/loot_tables/injects/chests/epic/undergarden_epic.json
-38c83bdbc20adeb264427e398e1fce8a1432df8d data/treasure2/loot_tables/injects/chests/legendary/undergarden_legendary.json
+// 1.20.1	2025-03-05T13:54:18.4814381	Loot Tables
+e0027d65a93f18e117951a405405b7e963c3373d data/treasure2/loot_tables/injects/chests/crystal_skull/undergarden_crystal_skull.json
+17bf5361cb1a503fe49788be8567cb4046b9eaa1 data/treasure2/loot_tables/injects/chests/epic/undergarden_epic.json
+5be68c3af594eeb42e0f2a02b73db3b82c1941a3 data/treasure2/loot_tables/injects/chests/gold_skull/undergarden_gold_skull.json
+3db047f962e83113e5c94c5fafe33421ce708d0f data/treasure2/loot_tables/injects/chests/legendary/undergarden_legendary.json
+e3efc511c716403a96e13f3966eb2adea5be4307 data/treasure2/loot_tables/injects/chests/mythical/undergarden_mythical.json
 e092d2dbdf884f473b4be72e815b7c71c28db831 data/treasure2/loot_tables/injects/chests/rare/undergarden_rare.json
 dbc64347a70ee953e70a68c8d4c62e9752afe1b0 data/treasure2/loot_tables/injects/chests/scarce/undergarden_scarce.json
+5a7559f8fdbcb9fe436be118193e5408102448f6 data/treasure2/loot_tables/injects/chests/skull/undergarden_skull.json

@@ -36,7 +36,6 @@ import java.util.function.BiConsumer;
  * TNT -> BLISTER BOMB
  * ARROW -> DEPTHROCKPEBBLE
  * SPECTRAL_ARROW -> GOO BALL
- * TIPPED_ARROW -> that yellow thing
  *
  * BOW -> SLINGSHOT
  *
@@ -57,6 +56,10 @@ import java.util.function.BiConsumer;
  * MUSIC_DISC_MALL -> GLOOMPER_SECRET_DISC
  *
  * NETHERITE_UPGRADE_SMITHING_TEMPLATE -> FORGOTTEN_UPGRADE_TEMPLATE
+ * NETHERITE_PICKAXE -> CLOGGRUM_BATTLEAXE
+ * NETHERITE_AXE -> FORGOTTEN_BATTLEAXE
+ *
+ * EMERALD -> RAGLIUM_CRYSTAL
  * Some specials have to be manually updated, like Shields.
  *
  * Make sure to remove the "type":"chest" entry from the loot table
@@ -79,6 +82,50 @@ public class ModLootTablesProvider extends LootTableProvider {
             generateEpic(consumer);
             generateLegendary(consumer);
             generateMythic(consumer);
+
+            generateSkull(consumer);
+            generateGoldSkull(consumer);
+            generateCrystalSkull(consumer);
+
+        }
+
+        private void generateCrystalSkull(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
+            consumer.accept(new ResourceLocation(Treasure.MODID, "injects/chests/crystal_skull/undergarden_crystal_skull"), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .name("undergarden_crystal_skull_items")
+                            .setRolls(ConstantValue.exactly(1F))
+
+                            .add(LootItem.lootTableItem(Items.EMERALD).setWeight(1)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(5F, 10F))))
+                    )
+            );
+        }
+
+        private void generateGoldSkull(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
+            consumer.accept(new ResourceLocation(Treasure.MODID, "injects/chests/gold_skull/undergarden_gold_skull"), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .name("undergarden_gold_skull_items")
+                            .setRolls(ConstantValue.exactly(1F))
+
+                            .add(LootItem.lootTableItem(Items.EMERALD).setWeight(1)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(2F, 5F))))
+                    )
+            );
+        }
+
+        private void generateSkull(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
+            consumer.accept(new ResourceLocation(Treasure.MODID, "injects/chests/skull/undergarden_skull"), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .name("undergarden_skull_items")
+                            .setRolls(ConstantValue.exactly(1F))
+
+                            .add(LootItem.lootTableItem(Items.EMERALD).setWeight(1)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(0F, 2F))))
+                    )
+            );
         }
 
         private void generateMythic(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
@@ -159,7 +206,7 @@ public class ModLootTablesProvider extends LootTableProvider {
                                     .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
 
                             .add(LootItem.lootTableItem(Items.IRON_AXE).setWeight(2)
-                                  .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
 
                             .add(LootItem.lootTableItem(Items.COOKED_PORKCHOP).setWeight(2)
                                     .apply(SetItemCountFunction
@@ -216,7 +263,14 @@ public class ModLootTablesProvider extends LootTableProvider {
 
                             .add(LootItem.lootTableItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE).setWeight(1).setQuality(1))
 
-                            // TODO add battle axes
+                            // battle axes
+                            .add(LootItem.lootTableItem(Items.NETHERITE_PICKAXE).setWeight(2).setQuality(1)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
+
+                            .add(LootItem.lootTableItem(Items.NETHERITE_AXE).setWeight(2).setQuality(1)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
+
+
                     )
             );
         }
@@ -236,9 +290,7 @@ public class ModLootTablesProvider extends LootTableProvider {
                             .add(LootItem.lootTableItem(Items.SPECTRAL_ARROW).setWeight(2)
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(20F, 30.0F))))
-                            .add(LootItem.lootTableItem(Items.TIPPED_ARROW).setWeight(3)
-                                    .apply(SetItemCountFunction
-                                            .setCount(UniformGenerator.between(10F, 20.0F))))
+
                             .add(LootItem.lootTableItem(Items.TNT).setWeight(3)
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(10F, 20F))))
@@ -372,6 +424,8 @@ public class ModLootTablesProvider extends LootTableProvider {
 
                             .add(LootItem.lootTableItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE).setWeight(1))
 
+                            .add(LootItem.lootTableItem(Items.NETHERITE_PICKAXE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.NETHERITE_AXE).setWeight(1))
                     )
             );
         }
@@ -395,9 +449,7 @@ public class ModLootTablesProvider extends LootTableProvider {
                             .add(LootItem.lootTableItem(Items.SPECTRAL_ARROW).setWeight(1)
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(10F, 20.0F))))
-                            .add(LootItem.lootTableItem(Items.TIPPED_ARROW).setWeight(1)
-                                    .apply(SetItemCountFunction
-                                            .setCount(UniformGenerator.between(5F, 10.0F))))
+
                             .add(LootItem.lootTableItem(Items.TNT).setWeight(1)
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(5F, 10F))))
@@ -509,43 +561,43 @@ public class ModLootTablesProvider extends LootTableProvider {
                                             .setCount(UniformGenerator.between(1.0F, 4.0F))))
                     )
 
-              .withPool(LootPool.lootPool()
-                    .name("undergarden_epic_forgotten_items")
-                    .setRolls(ConstantValue.exactly(1F))
-                    .add(EmptyLootItem.emptyItem().setWeight(50))
+                    .withPool(LootPool.lootPool()
+                            .name("undergarden_epic_forgotten_items")
+                            .setRolls(ConstantValue.exactly(1F))
+                            .add(EmptyLootItem.emptyItem().setWeight(50))
 
-                    .add(LootItem.lootTableItem(Items.DIAMOND_CHESTPLATE).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.3F, 0.5F))))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_CHESTPLATE).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.3F, 0.5F))))
 
-                    .add(LootItem.lootTableItem(Items.DIAMOND_LEGGINGS).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.3F, 0.5F))))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_LEGGINGS).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.3F, 0.5F))))
 
-                    .add(LootItem.lootTableItem(Items.DIAMOND_BOOTS).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.3F, 0.5F))))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_BOOTS).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.3F, 0.5F))))
 
-                    .add(LootItem.lootTableItem(Items.DIAMOND_SWORD).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.3F, 0.5F))))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_SWORD).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.3F, 0.5F))))
 
-                    .add(LootItem.lootTableItem(Items.SHIELD).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.3F, 0.5F))))
+                            .add(LootItem.lootTableItem(Items.SHIELD).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.3F, 0.5F))))
 
-                    .add(LootItem.lootTableItem(Items.DIAMOND_AXE).setWeight(1))
-                    .add(LootItem.lootTableItem(Items.DIAMOND_HOE).setWeight(1))
-                    .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).setWeight(1))
-                    .add(LootItem.lootTableItem(Items.DIAMOND_SHOVEL).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_AXE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_HOE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_SHOVEL).setWeight(1))
 
-                    .add(LootItem.lootTableItem(Items.BEEF).setWeight(2)
-                            .apply(SetItemCountFunction
-                                    .setCount(UniformGenerator.between(2.0F, 5.0F))))
+                            .add(LootItem.lootTableItem(Items.BEEF).setWeight(2)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(2.0F, 5.0F))))
 
-                      .add(LootItem.lootTableItem(Items.MUSIC_DISC_BLOCKS).setWeight(1))
-                      .add(LootItem.lootTableItem(Items.MUSIC_DISC_CAT).setWeight(1))
-              )
+                            .add(LootItem.lootTableItem(Items.MUSIC_DISC_BLOCKS).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.MUSIC_DISC_CAT).setWeight(1))
+                    )
             );
         }
 
@@ -555,86 +607,86 @@ public class ModLootTablesProvider extends LootTableProvider {
         private void generateRare(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
             consumer.accept(new ResourceLocation(Treasure.MODID, "injects/chests/rare/undergarden_rare"), LootTable.lootTable()
                     .withPool(LootPool.lootPool()
-                    .name("undergarden_rare_items")
-                    .setRolls(ConstantValue.exactly(1F))
-                    .add(EmptyLootItem.emptyItem().setWeight(30))
+                            .name("undergarden_rare_items")
+                            .setRolls(ConstantValue.exactly(1F))
+                            .add(EmptyLootItem.emptyItem().setWeight(30))
 
-                    // misc non-metal weapons
-                    .add(LootItem.lootTableItem(Items.BOW).setWeight(4))
-                    .add(LootItem.lootTableItem(Items.ARROW).setWeight(3)
-                            .apply(SetItemCountFunction
-                                    .setCount(UniformGenerator.between(10.0F, 15.0F))))
-                    .add(LootItem.lootTableItem(Items.SPECTRAL_ARROW).setWeight(1)
-                            .apply(SetItemCountFunction
-                                    .setCount(UniformGenerator.between(2.0F, 10.0F))))
-                    .add(LootItem.lootTableItem(Items.TNT).setWeight(1)
-                            .apply(SetItemCountFunction
-                                    .setCount(UniformGenerator.between(2.0F, 5.0F))))
+                            // misc non-metal weapons
+                            .add(LootItem.lootTableItem(Items.BOW).setWeight(4))
+                            .add(LootItem.lootTableItem(Items.ARROW).setWeight(3)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(10.0F, 15.0F))))
+                            .add(LootItem.lootTableItem(Items.SPECTRAL_ARROW).setWeight(1)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(2.0F, 10.0F))))
+                            .add(LootItem.lootTableItem(Items.TNT).setWeight(1)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(2.0F, 5.0F))))
 
-                    // Cloggrum
-                    .add(LootItem.lootTableItem(Items.LEATHER_HELMET).setWeight(4)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            // Cloggrum
+                            .add(LootItem.lootTableItem(Items.LEATHER_HELMET).setWeight(4)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.LEATHER_CHESTPLATE).setWeight(4)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.LEATHER_CHESTPLATE).setWeight(4)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.LEATHER_LEGGINGS).setWeight(4)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.LEATHER_LEGGINGS).setWeight(4)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.LEATHER_BOOTS).setWeight(4)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.LEATHER_BOOTS).setWeight(4)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.WOODEN_SWORD).setWeight(4)
+                            .add(LootItem.lootTableItem(Items.WOODEN_SWORD).setWeight(4)
 
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
-                    .add(LootItem.lootTableItem(Items.SHIELD).setWeight(4)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
-                    .add(LootItem.lootTableItem(Items.WOODEN_AXE).setWeight(2))
-                    .add(LootItem.lootTableItem(Items.WOODEN_HOE).setWeight(2))
-                    .add(LootItem.lootTableItem(Items.WOODEN_PICKAXE).setWeight(2))
-                    .add(LootItem.lootTableItem(Items.WOODEN_SHOVEL).setWeight(2))
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.SHIELD).setWeight(4)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.WOODEN_AXE).setWeight(2))
+                            .add(LootItem.lootTableItem(Items.WOODEN_HOE).setWeight(2))
+                            .add(LootItem.lootTableItem(Items.WOODEN_PICKAXE).setWeight(2))
+                            .add(LootItem.lootTableItem(Items.WOODEN_SHOVEL).setWeight(2))
 
-                    .add(LootItem.lootTableItem(Items.IRON_NUGGET).setWeight(2)
-                            .apply(SetItemCountFunction
-                                    .setCount(UniformGenerator.between(5.0F, 10.0F))))
+                            .add(LootItem.lootTableItem(Items.IRON_NUGGET).setWeight(2)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(5.0F, 10.0F))))
 
-                    // frosteel
-                    .add(LootItem.lootTableItem(Items.GOLDEN_HELMET).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            // frosteel
+                            .add(LootItem.lootTableItem(Items.GOLDEN_HELMET).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.GOLDEN_CHESTPLATE).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_CHESTPLATE).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.GOLDEN_LEGGINGS).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_LEGGINGS).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.GOLDEN_BOOTS).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_BOOTS).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.GOLDEN_SWORD).setWeight(1))
-                    .add(LootItem.lootTableItem(Items.SHIELD).setWeight(1)
-                            .apply(SetItemDamageFunction
-                                    .setDamage(UniformGenerator.between(0.6F, 0.9F))))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_SWORD).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.SHIELD).setWeight(1)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
-                    .add(LootItem.lootTableItem(Items.GOLDEN_AXE).setWeight(1))
-                    .add(LootItem.lootTableItem(Items.GOLDEN_HOE).setWeight(1))
-                    .add(LootItem.lootTableItem(Items.GOLDEN_PICKAXE).setWeight(1))
-                    .add(LootItem.lootTableItem(Items.GOLDEN_SHOVEL).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_AXE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_HOE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_PICKAXE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.GOLDEN_SHOVEL).setWeight(1))
 
-                    .add(LootItem.lootTableItem(Items.GOLD_NUGGET).setWeight(1)
-                            .apply(SetItemCountFunction
-                                    .setCount(UniformGenerator.between(5.0F, 10.0F))))
-            )
+                            .add(LootItem.lootTableItem(Items.GOLD_NUGGET).setWeight(1)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(5.0F, 10.0F))))
+                    )
                     .withPool(LootPool.lootPool()
                             .name("undergarden_rare_utherium_items")
                             .setRolls(ConstantValue.exactly(1F))

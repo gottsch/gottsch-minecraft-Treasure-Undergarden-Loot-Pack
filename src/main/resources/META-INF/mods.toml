@@ -77,7 +77,7 @@ description=""
     # the modid of the dependency
     modId="undergarden" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
-    mandatory=false #mandatory
+    mandatory=true #mandatory
     # The version range of the dependency
     versionRange="[0.8.14,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory

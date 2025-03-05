@@ -1,0 +1,27 @@
+{
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 0.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:emerald"
+        }
+      ],
+      "name": "undergarden_skull_items",
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "treasure2:injects/chests/skull/undergarden_skull"
+}
