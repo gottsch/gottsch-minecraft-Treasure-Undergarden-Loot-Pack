@@ -1,3 +1,5 @@
-// 1.20.1	2025-03-04T17:16:49.427907	Loot Tables
-84e4d3ac17d2336fca59e566e08a7f88804249a4 data/treasure2/loot_tables/injects/chests/rare/undergarden_general.json
-fb8b22c9a414b47450ccd180e346ea431e09fae6 data/treasure2/loot_tables/injects/chests/scarce/undergarden_general_test.json
+// 1.20.1	2025-03-04T21:51:02.7946846	Loot Tables
+2792f63917e21565e65e792957ddbd64c0ebdc56 data/treasure2/loot_tables/injects/chests/epic/undergarden_epic.json
+38c83bdbc20adeb264427e398e1fce8a1432df8d data/treasure2/loot_tables/injects/chests/legendary/undergarden_legendary.json
+e092d2dbdf884f473b4be72e815b7c71c28db831 data/treasure2/loot_tables/injects/chests/rare/undergarden_rare.json
+dbc64347a70ee953e70a68c8d4c62e9752afe1b0 data/treasure2/loot_tables/injects/chests/scarce/undergarden_scarce.json

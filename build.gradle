@@ -95,7 +95,7 @@ repositories {
 
 dependencies {
      minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation fg.deobf("gottsch:gottschcore:1.20.1-2.2.0")
+    implementation fg.deobf("curse.maven:gottschcore-272450:5650843")
     implementation fg.deobf("curse.maven:treasure2-289760:6085216")
 //    implementation fg.deobf("curse.maven:undergarden-379849:5182632")
     }
