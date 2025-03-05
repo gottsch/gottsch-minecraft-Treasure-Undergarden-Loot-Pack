@@ -54,7 +54,9 @@ import java.util.function.BiConsumer;
  *MUSIC_DISC_CAT -> LIMAX_MAXIMUS_DISC
  * MUSIC_DISC_CHIRP -> RELICT_DISC
  * MUSIC_DISC_FAR -> GLOOMPER_ANTHEM_DISC
+ * MUSIC_DISC_MALL -> GLOOMPER_SECRET_DISC
  *
+ * NETHERITE_UPGRADE_SMITHING_TEMPLATE -> FORGOTTEN_UPGRADE_TEMPLATE
  * Some specials have to be manually updated, like Shields.
  *
  * Make sure to remove the "type":"chest" entry from the loot table
@@ -80,6 +82,143 @@ public class ModLootTablesProvider extends LootTableProvider {
         }
 
         private void generateMythic(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
+            consumer.accept(new ResourceLocation(Treasure.MODID, "injects/chests/mythical/undergarden_mythical"), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .name("undergarden_mythical_items")
+                            .setRolls(ConstantValue.exactly(2F))
+
+                            // misc non-metal weapons
+                            .add(LootItem.lootTableItem(Items.TNT).setWeight(1)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(20F, 30F))))
+
+                            // Cloggrum
+                            .add(LootItem.lootTableItem(Items.LEATHER_HELMET).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
+
+                            .add(LootItem.lootTableItem(Items.LEATHER_CHESTPLATE).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
+
+                            .add(LootItem.lootTableItem(Items.LEATHER_LEGGINGS).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
+
+                            .add(LootItem.lootTableItem(Items.LEATHER_BOOTS).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
+
+                            .add(LootItem.lootTableItem(Items.WOODEN_SWORD).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
+
+                            .add(LootItem.lootTableItem(Items.SHIELD).setWeight(2))
+
+                            .add(LootItem.lootTableItem(Items.WOODEN_AXE).setWeight(1)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
+
+                            .add(LootItem.lootTableItem(Items.IRON_INGOT).setWeight(2)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(20F, 30F))))
+
+                            // frosteel
+                            .add(LootItem.lootTableItem(Items.GOLDEN_HELMET).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20F, 30F))))
+
+                            .add(LootItem.lootTableItem(Items.GOLDEN_CHESTPLATE).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20F, 30F))))
+
+                            .add(LootItem.lootTableItem(Items.GOLDEN_LEGGINGS).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20F, 30F))))
+
+                            .add(LootItem.lootTableItem(Items.GOLDEN_BOOTS).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20F, 30F))))
+
+                            .add(LootItem.lootTableItem(Items.GOLDEN_SWORD).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20F, 30F))))
+
+                            .add(LootItem.lootTableItem(Items.SHIELD).setWeight(2))
+
+                            .add(LootItem.lootTableItem(Items.GOLDEN_AXE).setWeight(1)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20F, 30F))))
+
+                            .add(LootItem.lootTableItem(Items.GOLD_INGOT).setWeight(2)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(20F, 30F))))
+
+                            // utherium
+                            .add(LootItem.lootTableItem(Items.IRON_CHESTPLATE).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
+
+                            .add(LootItem.lootTableItem(Items.IRON_LEGGINGS).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
+
+                            .add(LootItem.lootTableItem(Items.IRON_BOOTS).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
+
+                            .add(LootItem.lootTableItem(Items.IRON_SWORD).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
+
+                            .add(LootItem.lootTableItem(Items.SHIELD).setWeight(2)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
+
+                            .add(LootItem.lootTableItem(Items.IRON_AXE).setWeight(2)
+                                  .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15F, 20F))))
+
+                            .add(LootItem.lootTableItem(Items.COOKED_PORKCHOP).setWeight(2)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(10F, 20F))))
+                    )
+
+                    // forgotten
+                    .withPool(LootPool.lootPool()
+                            .name("undergarden_mythical_forgotten_items")
+                            .setRolls(ConstantValue.exactly(1F))
+                            .add(EmptyLootItem.emptyItem().setWeight(30))
+
+                            .add(LootItem.lootTableItem(Items.DIAMOND_CHESTPLATE).setWeight(2)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.8F, 0.95F)))
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
+
+                            .add(LootItem.lootTableItem(Items.DIAMOND_LEGGINGS).setWeight(2)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.8F, 0.95F)))
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
+
+                            .add(LootItem.lootTableItem(Items.DIAMOND_BOOTS).setWeight(2)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.8F, 0.95F)))
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
+
+                            .add(LootItem.lootTableItem(Items.DIAMOND_SWORD).setWeight(2)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.8F, 0.95F)))
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
+
+                            .add(LootItem.lootTableItem(Items.SHIELD).setWeight(2)
+                                    .apply(SetItemDamageFunction
+                                            .setDamage(UniformGenerator.between(0.8F, 0.95F))))
+
+
+                            .add(LootItem.lootTableItem(Items.DIAMOND_AXE).setWeight(1)
+                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
+
+                            .add(LootItem.lootTableItem(Items.DIAMOND_HOE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.DIAMOND_SHOVEL).setWeight(1))
+
+                            .add(LootItem.lootTableItem(Items.COOKED_BEEF).setWeight(2)
+                                    .apply(SetItemCountFunction
+                                            .setCount(UniformGenerator.between(5F, 15F))))
+
+                            .add(LootItem.lootTableItem(Items.MUSIC_DISC_BLOCKS).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.MUSIC_DISC_CAT).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.MUSIC_DISC_CHIRP).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.MUSIC_DISC_FAR).setWeight(1))
+                            .add(LootItem.lootTableItem(Items.MUSIC_DISC_MALL).setWeight(1))
+
+                            .add(LootItem.lootTableItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE).setWeight(1).setQuality(1))
+
+                            // TODO add battle axes
+                    )
+            );
         }
 
         private void generateLegendary(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
@@ -230,6 +369,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_CAT).setWeight(1))
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_CHIRP).setWeight(1))
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_FAR).setWeight(1))
+
+                            .add(LootItem.lootTableItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE).setWeight(1))
 
                     )
             );
