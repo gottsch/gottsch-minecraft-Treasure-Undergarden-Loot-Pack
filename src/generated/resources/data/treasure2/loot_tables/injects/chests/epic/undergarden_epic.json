@@ -133,6 +133,83 @@
           "name": "undergarden:cloggrum_leggings",
           "weight": 4
         },
+
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 1.0,
+                "min": 0.8
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "undergarden:ancient_helmet",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 1.0,
+                "min": 0.8
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "undergarden:ancient_chestplate",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 1.0,
+                "min": 0.8
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 20.0,
+                "min": 15.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "undergarden:ancient_leggings",
+          "weight": 4
+        },
+
         {
           "type": "minecraft:item",
           "functions": [
@@ -196,7 +273,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:shield",
+          "name": "undergarden:cloggrum_shield",
           "weight": 4
         },
         {
@@ -324,22 +401,6 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 0.8
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:shield",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
           "name": "undergarden:froststeel_axe"
         },
         {
@@ -446,22 +507,6 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:shield",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
           "name": "undergarden:utherium_axe",
           "weight": 3
         },
@@ -520,83 +565,23 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond_chestplate"
+          "name": "undergarden:forgotten_sword"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.5,
-                "min": 0.3
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:diamond_leggings"
+          "name": "undergarden:forgotten_axe"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.5,
-                "min": 0.3
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:diamond_boots"
+          "name": "undergarden:forgotten_hoe"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.5,
-                "min": 0.3
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:diamond_sword"
+          "name": "undergarden:forgotten_pickaxe"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.5,
-                "min": 0.3
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:shield"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_hoe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_shovel"
+          "name": "undergarden:forgotten_shovel"
         },
         {
           "type": "minecraft:item",

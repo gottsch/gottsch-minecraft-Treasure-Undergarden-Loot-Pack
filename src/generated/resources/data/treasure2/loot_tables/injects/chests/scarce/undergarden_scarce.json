@@ -136,7 +136,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:shield",
+          "name": "undergarden:cloggrum_shield",
           "weight": 4
         },
         {
@@ -174,6 +174,54 @@
           ],
           "name": "undergarden:cloggrum_nugget",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.6,
+                "min": 0.3
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "undergarden:ancient_helmet",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.6,
+                "min": 0.3
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "undergarden:ancient_chestplate",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.6,
+                "min": 0.3
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "undergarden:ancient_leggings",
+          "weight": 4
         },
         {
           "type": "minecraft:item",
@@ -238,21 +286,6 @@
         {
           "type": "minecraft:item",
           "name": "undergarden:froststeel_sword"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.6,
-                "min": 0.3
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:shield"
         },
         {
           "type": "minecraft:item",

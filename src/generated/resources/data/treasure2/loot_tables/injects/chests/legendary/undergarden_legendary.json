@@ -140,7 +140,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:shield",
+          "name": "undergarden:cloggrum_shield",
           "weight": 4
         },
         {
@@ -174,6 +174,57 @@
           "name": "undergarden:cloggrum_ingot",
           "weight": 2
         },
+
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 30.0,
+                "min": 20.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "undergarden:ancient_helmet",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 30.0,
+                "min": 20.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "undergarden:ancient_chestplate",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 30.0,
+                "min": 20.0
+              },
+              "treasure": false
+            }
+          ],
+          "name": "undergarden:ancient_leggings",
+          "weight": 4
+        },
+
         {
           "type": "minecraft:item",
           "functions": [
@@ -252,11 +303,6 @@
             }
           ],
           "name": "undergarden:froststeel_sword",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:shield",
           "weight": 2
         },
         {
@@ -368,22 +414,6 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 8.0
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:shield",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
           "name": "undergarden:utherium_axe",
           "weight": 2
         },
@@ -442,88 +472,24 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond_chestplate",
+          "name": "undergarden:forgotten_sword",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:diamond_leggings",
-          "weight": 2
+          "name": "undergarden:forgotten_axe"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:diamond_boots",
-          "weight": 2
+          "name": "undergarden:forgotten_hoe"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:diamond_sword",
-          "weight": 2
+          "name": "undergarden:forgotten_pickaxe"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:shield",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_hoe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_shovel"
+          "name": "undergarden:forgotten_shovel"
         },
         {
           "type": "minecraft:item",
