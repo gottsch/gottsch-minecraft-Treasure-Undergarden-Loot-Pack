@@ -9,7 +9,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:bow",
+          "name": "undergarden:slingshot",
           "weight": 4
         },
         {
@@ -25,7 +25,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:arrow",
+          "name": "undergarden:depthrock_pebble",
           "weight": 2
         },
         {
@@ -41,7 +41,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:tnt"
+          "name": "undergarden:blisterbomb"
         },
         {
           "type": "minecraft:item",
@@ -56,7 +56,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:leather_helmet",
+          "name": "undergarden:cloggrum_helmet",
           "weight": 4
         },
         {
@@ -72,7 +72,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:leather_chestplate",
+          "name": "undergarden:cloggrum_chestplate",
           "weight": 4
         },
         {
@@ -88,7 +88,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:leather_leggings",
+          "name": "undergarden:cloggrum_leggings",
           "weight": 4
         },
         {
@@ -104,7 +104,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:leather_boots",
+          "name": "undergarden:cloggrum_boots",
           "weight": 4
         },
         {
@@ -120,7 +120,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:wooden_sword",
+          "name": "undergarden:cloggrum_sword",
           "weight": 4
         },
         {
@@ -141,22 +141,22 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_axe",
+          "name": "undergarden:cloggrum_axe",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_hoe",
+          "name": "undergarden:cloggrum_hoe",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_pickaxe",
+          "name": "undergarden:cloggrum_pickaxe",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_shovel",
+          "name": "undergarden:cloggrum_shovel",
           "weight": 4
         },
         {
@@ -172,7 +172,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:iron_nugget",
+          "name": "undergarden:cloggrum_nugget",
           "weight": 2
         },
         {
@@ -188,7 +188,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:golden_helmet"
+          "name": "undergarden:froststeel_helmet"
         },
         {
           "type": "minecraft:item",
@@ -203,7 +203,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:golden_chestplate"
+          "name": "undergarden:froststeel_chestplate"
         },
         {
           "type": "minecraft:item",
@@ -218,7 +218,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:golden_leggings"
+          "name": "undergarden:froststeel_leggings"
         },
         {
           "type": "minecraft:item",
@@ -233,11 +233,11 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:golden_boots"
+          "name": "undergarden:froststeel_boots"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_sword"
+          "name": "undergarden:froststeel_sword"
         },
         {
           "type": "minecraft:item",
@@ -256,19 +256,19 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_axe"
+          "name": "undergarden:froststeel_axe"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_hoe"
+          "name": "undergarden:froststeel_hoe"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_pickaxe"
+          "name": "undergarden:froststeel_pickaxe"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_shovel"
+          "name": "undergarden:froststeel_shovel"
         },
         {
           "type": "minecraft:item",
@@ -283,7 +283,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:gold_nugget"
+          "name": "undergarden:froststeel_nugget"
         }
       ],
       "name": "undergarden_scarce_items",

@@ -29,7 +29,7 @@ import java.util.function.BiConsumer;
  * generation.
  *
  * In general
- * WOOD -> CLOGGRUM
+ * WOOD/LEATHER -> CLOGGRUM
  * GOLD -> FROSTEEL
  * IRON -> UTHERIUM
  * DIAMOND -> FORGOTTEN
@@ -60,6 +60,7 @@ import java.util.function.BiConsumer;
  * NETHERITE_AXE -> FORGOTTEN_BATTLEAXE
  *
  * EMERALD -> RAGLIUM_CRYSTAL
+ * DIAMOND -> CATALYST
  * Some specials have to be manually updated, like Shields.
  *
  * Make sure to remove the "type":"chest" entry from the loot table
@@ -686,6 +687,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                             .add(LootItem.lootTableItem(Items.GOLD_NUGGET).setWeight(1)
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(5.0F, 10.0F))))
+
+                            .add(LootItem.lootTableItem(Items.DIAMOND).setWeight(1))
                     )
                     .withPool(LootPool.lootPool()
                             .name("undergarden_rare_utherium_items")
@@ -720,6 +723,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                             .add(LootItem.lootTableItem(Items.PORKCHOP).setWeight(2)
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(1.0F, 4.0F))))
+
+                            .add(LootItem.lootTableItem(Items.IRON_SHOVEL).setWeight(4))
                     )
             );
         }

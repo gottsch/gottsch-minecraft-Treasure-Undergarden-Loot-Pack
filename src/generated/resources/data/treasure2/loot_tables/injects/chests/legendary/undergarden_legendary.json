@@ -9,7 +9,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:bow"
+          "name": "undergarden:slingshot"
         },
         {
           "type": "minecraft:item",
@@ -24,7 +24,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:arrow"
+          "name": "undergarden:depthrock_pebble"
         },
         {
           "type": "minecraft:item",
@@ -39,7 +39,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:spectral_arrow",
+          "name": "undergarden:goo_ball",
           "weight": 2
         },
         {
@@ -55,7 +55,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:tnt",
+          "name": "undergarden:blisterbomb",
           "weight": 3
         },
         {
@@ -71,7 +71,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:leather_helmet",
+          "name": "undergarden:cloggrum_helmet",
           "weight": 4
         },
         {
@@ -87,7 +87,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:leather_chestplate",
+          "name": "undergarden:cloggrum_chestplate",
           "weight": 4
         },
         {
@@ -103,7 +103,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:leather_leggings",
+          "name": "undergarden:cloggrum_leggings",
           "weight": 4
         },
         {
@@ -119,7 +119,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:leather_boots",
+          "name": "undergarden:cloggrum_boots",
           "weight": 4
         },
         {
@@ -135,7 +135,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:wooden_sword",
+          "name": "undergarden:cloggrum_sword",
           "weight": 4
         },
         {
@@ -156,7 +156,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:wooden_axe"
+          "name": "undergarden:cloggrum_axe"
         },
         {
           "type": "minecraft:item",
@@ -171,7 +171,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:iron_ingot",
+          "name": "undergarden:cloggrum_ingot",
           "weight": 2
         },
         {
@@ -187,7 +187,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:golden_helmet",
+          "name": "undergarden:froststeel_helmet",
           "weight": 2
         },
         {
@@ -203,7 +203,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:golden_chestplate",
+          "name": "undergarden:froststeel_chestplate",
           "weight": 2
         },
         {
@@ -219,7 +219,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:golden_leggings",
+          "name": "undergarden:froststeel_leggings",
           "weight": 2
         },
         {
@@ -235,7 +235,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:golden_boots",
+          "name": "undergarden:froststeel_boots",
           "weight": 2
         },
         {
@@ -251,7 +251,7 @@
               "treasure": false
             }
           ],
-          "name": "minecraft:golden_sword",
+          "name": "undergarden:froststeel_sword",
           "weight": 2
         },
         {
@@ -261,19 +261,19 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_axe"
+          "name": "undergarden:froststeel_axe"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_hoe"
+          "name": "undergarden:froststeel_hoe"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_pickaxe"
+          "name": "undergarden:froststeel_pickaxe"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_shovel"
+          "name": "undergarden:froststeel_shovel"
         },
         {
           "type": "minecraft:item",
@@ -288,7 +288,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:gold_ingot",
+          "name": "undergarden:froststeel_ingot",
           "weight": 2
         }
       ],
@@ -315,7 +315,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:iron_chestplate",
+          "name": "undergarden:utherium_chestplate",
           "weight": 4
         },
         {
@@ -331,7 +331,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:iron_leggings",
+          "name": "undergarden:utherium_leggings",
           "weight": 4
         },
         {
@@ -347,7 +347,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:iron_boots",
+          "name": "undergarden:utherium_boots",
           "weight": 4
         },
         {
@@ -363,7 +363,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:iron_sword",
+          "name": "undergarden:utherium_sword",
           "weight": 4
         },
         {
@@ -384,22 +384,22 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_axe",
+          "name": "undergarden:utherium_axe",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_hoe",
+          "name": "undergarden:utherium_hoe",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_pickaxe",
+          "name": "undergarden:utherium_pickaxe",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_shovel",
+          "name": "undergarden:utherium_shovel",
           "weight": 2
         },
         {
@@ -415,7 +415,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:cooked_porkchop",
+          "name": "undergarden:utherium_crystal",
           "weight": 2
         }
       ],
@@ -538,36 +538,36 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:cooked_beef",
+          "name": "undergarden:forgotten_ingot",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_blocks"
+          "name": "undergarden:music_disc_mammoth"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_cat"
+          "name": "undergarden:music_disc_limax_maximus"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_chirp"
+          "name": "undergarden:music_disc_relict"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_far"
+          "name": "undergarden:music_disc_gloomper_anthem"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:netherite_upgrade_smithing_template"
+          "name": "undergarden:forgotten_upgrade_smithing_template"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:netherite_pickaxe"
+          "name": "undergarden:cloggrum_battleaxe"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:netherite_axe"
+          "name": "undergarden:forgotten_battleaxe"
         }
       ],
       "name": "undergarden_legendary_forgotten_items",

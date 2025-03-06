@@ -16,7 +16,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:emerald"
+          "name": "undergarden:regalium_crystal"
         }
       ],
       "name": "undergarden_gold_skull_items",
