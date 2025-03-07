@@ -525,10 +525,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "undergarden:forgotten_upgrade_smithing_template"
-        },
-        {
-          "type": "minecraft:item",
           "name": "undergarden:cloggrum_battleaxe"
         },
         {

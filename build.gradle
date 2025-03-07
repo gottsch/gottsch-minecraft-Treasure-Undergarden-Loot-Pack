@@ -1,8 +1,7 @@
 plugins {
     id 'eclipse'
-    id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
 version = "${minecraft_version}-${mod_version}"
@@ -17,8 +16,6 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
      mappings channel: mapping_channel, version: mapping_version
-
-   copyIdeResources = true
 
     runs {
         // required for using mixin in forge
@@ -95,9 +92,9 @@ repositories {
 
 dependencies {
      minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation fg.deobf("curse.maven:gottschcore-272450:5650843")
-    implementation fg.deobf("curse.maven:treasure2-289760:6085216")
-    implementation fg.deobf("curse.maven:undergarden-379849:5182632")
+    implementation fg.deobf("curse.maven:gottschcore-272450:4629077")
+    implementation fg.deobf("curse.maven:treasure2-289760:6008348")
+    implementation fg.deobf("curse.maven:undergarden-379849:4057184")
     }
 
 // This block of code expands all declared replace properties in the specified resource targets.

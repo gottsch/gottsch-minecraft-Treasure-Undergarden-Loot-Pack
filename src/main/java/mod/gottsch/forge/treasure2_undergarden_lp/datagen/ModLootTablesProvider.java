@@ -1,27 +1,30 @@
 package mod.gottsch.forge.treasure2_undergarden_lp.datagen;
 
+import com.mojang.datafixers.util.Pair;
 import mod.gottsch.forge.treasure2.Treasure;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.LootTables;
+import net.minecraft.world.level.storage.loot.ValidationContext;
 import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.EnchantWithLevelsFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemDamageFunction;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.CompletableFuture;
+import java.util.Map;
 import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 /**
  * NOTE can't get runData() to work with Undergarden as a dependency
@@ -69,16 +72,25 @@ import java.util.function.BiConsumer;
  * @author by Mark Gottschling on 3/3/2025
  */
 public class ModLootTablesProvider extends LootTableProvider {
-    public ModLootTablesProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
-        super(output, Set.of(), List.of(
-                new SubProviderEntry(Chests::new, LootContextParamSets.ALL_PARAMS)
-        ));
+    public ModLootTablesProvider(DataGenerator output) {
+        super(output);
     }
 
-    public static class Chests implements LootTableSubProvider {
+    @Override
+    protected void validate(Map<ResourceLocation, LootTable> map, ValidationContext validationtracker) {
+        map.forEach((location, lootTable) -> LootTables.validate(validationtracker, location, lootTable));
+    }
+
+    @Override
+    protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
+        return List.of(
+                Pair.of(Chests::new, LootContextParamSets.ALL_PARAMS));
+    }
+
+    public static class Chests  implements Consumer<BiConsumer<ResourceLocation, LootTable.Builder>> {
 
         @Override
-        public void generate(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
+        public void accept(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
             generateScarce(consumer);
             generateRare(consumer);
             generateEpic(consumer);
@@ -88,7 +100,6 @@ public class ModLootTablesProvider extends LootTableProvider {
             generateSkull(consumer);
             generateGoldSkull(consumer);
             generateCrystalSkull(consumer);
-
         }
 
         private void generateCrystalSkull(BiConsumer<ResourceLocation, LootTable.Builder> consumer) {
@@ -248,8 +259,6 @@ public class ModLootTablesProvider extends LootTableProvider {
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_FAR).setWeight(1))
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_MALL).setWeight(1))
 
-                            .add(LootItem.lootTableItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE).setWeight(1).setQuality(1))
-
                             // battle axes
                             .add(LootItem.lootTableItem(Items.NETHERITE_PICKAXE).setWeight(2).setQuality(1)
                                     .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(5F, 10F))))
@@ -396,8 +405,6 @@ public class ModLootTablesProvider extends LootTableProvider {
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_CAT).setWeight(1))
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_CHIRP).setWeight(1))
                             .add(LootItem.lootTableItem(Items.MUSIC_DISC_FAR).setWeight(1))
-
-                            .add(LootItem.lootTableItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE).setWeight(1))
 
                             .add(LootItem.lootTableItem(Items.NETHERITE_PICKAXE).setWeight(1))
                             .add(LootItem.lootTableItem(Items.NETHERITE_AXE).setWeight(1))
