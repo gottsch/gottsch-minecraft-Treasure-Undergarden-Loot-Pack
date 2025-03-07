@@ -188,39 +188,7 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "undergarden:ancient_helmet",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.6,
-                "min": 0.3
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "undergarden:ancient_chestplate",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.6,
-                "min": 0.3
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "undergarden:ancient_leggings",
+          "name": "undergarden:masticated_chestplate",
           "weight": 4
         },
         {

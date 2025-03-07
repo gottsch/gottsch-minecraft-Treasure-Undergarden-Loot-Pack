@@ -174,23 +174,6 @@
           "name": "undergarden:cloggrum_ingot",
           "weight": 2
         },
-
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
-              "treasure": false
-            }
-          ],
-          "name": "undergarden:ancient_helmet",
-          "weight": 4
-        },
         {
           "type": "minecraft:item",
 
@@ -205,26 +188,9 @@
               "treasure": false
             }
           ],
-          "name": "undergarden:ancient_chestplate",
+          "name": "undergarden:masticated_chestplate",
           "weight": 4
         },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:uniform",
-                "max": 30.0,
-                "min": 20.0
-              },
-              "treasure": false
-            }
-          ],
-          "name": "undergarden:ancient_leggings",
-          "weight": 4
-        },
-
         {
           "type": "minecraft:item",
           "functions": [

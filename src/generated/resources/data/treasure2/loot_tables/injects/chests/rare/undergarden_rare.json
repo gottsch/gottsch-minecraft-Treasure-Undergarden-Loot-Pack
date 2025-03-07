@@ -106,7 +106,6 @@
           "name": "undergarden:cloggrum_leggings",
           "weight": 4
         },
-
         {
           "type": "minecraft:item",
           "functions": [
@@ -120,42 +119,9 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "undergarden:ancient_helmet",
+          "name": "undergarden:masticated_chestplate",
           "weight": 4
         },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "undergarden:ancient_chestplate",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.6
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "undergarden:ancient_leggings",
-          "weight": 4
-        },
-
         {
           "type": "minecraft:item",
           "functions": [

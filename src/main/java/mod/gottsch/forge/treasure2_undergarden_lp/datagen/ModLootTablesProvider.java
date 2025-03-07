@@ -33,7 +33,7 @@ import java.util.function.Supplier;
  *
  * In general
  * WOOD/LEATHER -> CLOGGRUM
- * STONE/CHAIN -> ANCIENT (NO BOOTS)
+ * STONE/CHAIN -> MASTICATED_CHESTPLATE
  * GOLD -> FROSTEEL
  * IRON -> UTHERIUM
  * DIAMOND -> FORGOTTEN
@@ -177,14 +177,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(20F, 30F))))
 
-                            // ancient
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_HELMET).setWeight(2)
-                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
-
+                            // MASTICATED
                             .add(LootItem.lootTableItem(Items.CHAINMAIL_CHESTPLATE).setWeight(2)
-                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
-
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_LEGGINGS).setWeight(2)
                                     .apply(EnchantWithLevelsFunction.enchantWithLevels(ConstantValue.exactly(30F))))
 
                             // frosteel
@@ -315,14 +309,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(10F, 20F))))
 
-                            // ancient
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_HELMET).setWeight(4)
-                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20.0F, 30.0F))))
-
+                            // MASTICATED
                             .add(LootItem.lootTableItem(Items.CHAINMAIL_CHESTPLATE).setWeight(4)
-                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20.0F, 30.0F))))
-
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_LEGGINGS).setWeight(4)
                                     .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(20.0F, 30.0F))))
 
                             // frosteel
@@ -475,18 +463,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(5.0F, 10.0F))))
 
-                            // ancient
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_HELMET).setWeight(4)
-                                    .apply(SetItemDamageFunction
-                                            .setDamage(UniformGenerator.between(0.8F, 1F)))
-                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15.0F, 20.0F))))
-
+                            // MASTICATED
                             .add(LootItem.lootTableItem(Items.CHAINMAIL_CHESTPLATE).setWeight(4)
-                                    .apply(SetItemDamageFunction
-                                            .setDamage(UniformGenerator.between(0.8F, 1F)))
-                                    .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15.0F, 20.0F))))
-
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_LEGGINGS).setWeight(4)
                                     .apply(SetItemDamageFunction
                                             .setDamage(UniformGenerator.between(0.8F, 1F)))
                                     .apply(EnchantWithLevelsFunction.enchantWithLevels(UniformGenerator.between(15.0F, 20.0F))))
@@ -632,16 +610,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(5.0F, 10.0F))))
 
-                            // ancient
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_HELMET).setWeight(4)
-                                    .apply(SetItemDamageFunction
-                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
-
+                            // MASTICATED
                             .add(LootItem.lootTableItem(Items.CHAINMAIL_CHESTPLATE).setWeight(4)
-                                    .apply(SetItemDamageFunction
-                                            .setDamage(UniformGenerator.between(0.6F, 0.9F))))
-
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_LEGGINGS).setWeight(4)
                                     .apply(SetItemDamageFunction
                                             .setDamage(UniformGenerator.between(0.6F, 0.9F))))
 
@@ -765,16 +735,8 @@ public class ModLootTablesProvider extends LootTableProvider {
                                     .apply(SetItemCountFunction
                                             .setCount(UniformGenerator.between(1.0F, 4.0F))))
 
-                            // ancient
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_HELMET).setWeight(4)
-                                    .apply(SetItemDamageFunction
-                                            .setDamage(UniformGenerator.between(0.3F, 0.6F))))
-
+                            // MASTICATED
                             .add(LootItem.lootTableItem(Items.CHAINMAIL_CHESTPLATE).setWeight(4)
-                                    .apply(SetItemDamageFunction
-                                            .setDamage(UniformGenerator.between(0.3F, 0.6F))))
-
-                            .add(LootItem.lootTableItem(Items.CHAINMAIL_LEGGINGS).setWeight(4)
                                     .apply(SetItemDamageFunction
                                             .setDamage(UniformGenerator.between(0.3F, 0.6F))))
 

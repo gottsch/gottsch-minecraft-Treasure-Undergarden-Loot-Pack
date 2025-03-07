@@ -120,34 +120,9 @@
               "treasure": false
             }
           ],
-          "name": "undergarden:ancient_helmet",
+          "name": "undergarden:masticated_chestplate",
           "weight": 2
         },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 30.0,
-              "treasure": false
-            }
-          ],
-          "name": "undergarden:ancient_chestplate",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 30.0,
-              "treasure": false
-            }
-          ],
-          "name": "undergarden:ancient_leggings",
-          "weight": 2
-        },
-
         {
           "type": "minecraft:item",
           "functions": [
